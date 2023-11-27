@@ -43,3 +43,12 @@ function showData() {
   listContainer.innerHTML = localStorage.getItem("data");
 }
 showData();
+
+
+var input = document.getElementById("input-box");
+input.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("mybtn").click();
+  }
+});
